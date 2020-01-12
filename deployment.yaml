@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: emojicodeplayground
-        image: theothertomelliott/emojicode-playground:0.1.1
+        image: theothertomelliott/emojicode-playground:0.1.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
