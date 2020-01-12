@@ -1,0 +1,18 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: emojicodeplayground
+  namespace: emojicodeplayground
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/server-alias: emojicode.*
+spec:
+  rules:
+  - host: emojicode
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: emojicodeplayground
+          servicePort: http
