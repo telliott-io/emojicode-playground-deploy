@@ -5,6 +5,7 @@ metadata:
   namespace: emojicodeplayground
   labels:
     app: emojicodeplayground
+    version: v2
 spec:
   replicas: 2
   selector:
