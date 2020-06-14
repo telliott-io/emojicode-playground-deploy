@@ -4,15 +4,7 @@ resources:
 - namespace.yaml
 - deployment.yaml
 - ingress.yaml
-configMapGenerator:
-- name: emojicode-playground
-  files:
-  - image=emoji.png
-  literals:
-  - name=Emojicode Playground
-  - description=Execute emojicode programs live on the web!
-  - url=https://emojicode.telliott.io
-  namespace: projectlist
+- project.yaml
 generatorOptions:
   disableNameSuffixHash: true
   labels:
