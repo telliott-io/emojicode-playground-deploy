@@ -1,0 +1,19 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: emojitest
+  namespace: emojicodeplayground
+  labels:
+    app: emojicodeplayground
+    version: v2
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+  - kind: Rule
+    match: HostRegexp(`emojicode\..+`)
+    services:
+    - kind: Service
+      name: emojicodeplayground
+      port: http

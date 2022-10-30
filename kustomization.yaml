@@ -5,6 +5,7 @@ resources:
 - deployment.yaml
 - ingress.yaml
 - project.yaml
+- traefikingress.yaml
 generatorOptions:
   disableNameSuffixHash: true
   labels:
